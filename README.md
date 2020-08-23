@@ -15,13 +15,13 @@ sudo usermod -aG sudo USERNAME
 
 ### Setup git
 ```bash
+# git config --list
 git config --global credential.helper store
 git config --global user.email "example@gmail.com"
 git config --global user.name "example"
-# git config --list
 ```
 
-### Zsh
+### oh-my-zsh and plugins
 ```bash
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
@@ -63,19 +63,25 @@ sudo mount -a
 ```bash
 sudo apt install sambd
 sudo nano /etc/samba/smb.conf
-```
-Config example
-```
-[Data]
-    path = /media/XXXX
-    browseable = yes
-    writable = yes
-    create mode = 0644
-    directory mode = 0644
-    user = USERNAME
-```
-
-```bash
+# [Data]
+#     path = /media/XXXX
+#     browseable = yes
+#     writable = yes
+#     create mode = 0644
+#     directory mode = 0744
+#     user = USERNAME
 sudo service smbd restart
 ```
 
+### Hugo
+```bash
+# snap install hugo
+snap install hugo --channel=extended
+```
+
+### Google Cloud enable passwd login
+```bash
+sudo nano /etc/ssh/sshd_config
+# PasswordAuthentication yes
+sudo service sshd restart
+```
