@@ -43,6 +43,13 @@ gpustat -cupP -i
 sudo nvidia-smi -pl 125  # Set power limit
 ```
 
+### Nvidia GPU fan control 
+```bash
+sudo nvidia-xconfig -a --cool-bits=28 # then reboot
+sudo nvidia-settings -a '[gpu:0]/GPUFanControlState=1' 
+sudo nvidia-settings -a '[fan:0]/GPUTargetFanSpeed=50'
+```
+
 ### Anaconda
 ```bash
 wget https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh
