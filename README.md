@@ -3,8 +3,14 @@
 ```bash
 sudo apt update
 sudo apt upgrade
-sudo apt install htop git zsh openssh-server
+sudo apt install htop git zsh openssh-server vim
+sudo apt install smartmontools hddtemp nvme-cli # Hard disks
 ```
+
+### Hard disk monitor
+sudo hddtemp /dev/sd*
+sudo smartctl -a /dev/sda | grep Temperature_Celsius
+sudo nvme smart-log /dev/nvme0n1
 
 ### Add or remove user
 ```bash
