@@ -3,7 +3,7 @@
 ```bash
 sudo apt update
 sudo apt upgrade
-sudo apt install htop git zsh openssh-server vim
+sudo apt install htop git zsh openssh-server vim tmux
 sudo apt install smartmontools hddtemp nvme-cli # Hard disks
 ```
 
