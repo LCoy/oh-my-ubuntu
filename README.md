@@ -3,12 +3,17 @@
 ```bash
 sudo apt update
 sudo apt upgrade
-sudo apt install htop git zsh openssh-server vim tmux
+sudo apt install htop git zsh openssh-server vim tmux autossh
 
-#sudo apt install smartmontools hddtemp nvme-cli
+sudo apt install smartmontools hddtemp nvme-cli zfsutils-linux
 #sudo hddtemp /dev/sd*
 #sudo smartctl -a /dev/sda | grep Temperature_Celsius
+#sudo sudo nvme list
 #sudo sudo nvme smart-log /dev/nvme0n1
+```
+
+```KVM
+sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm virt-manager
 ```
 
 ### Docker
